@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Base styles */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             background-color: #f8e5e5;
             font-family: 'Inter', sans-serif;
             color: #333;
         }
-
         /* Typography - Headings */
-        h1, h2, .subtitle {
+        
+        h1,
+        h2,
+        .subtitle {
             font-family: 'Fraunces', serif;
         }
-
+        
         h1 {
             font-size: 4.5rem;
             margin-bottom: 1rem;
             font-weight: 300;
         }
-
+        
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             font-weight: 300;
         }
-
+        
         .subtitle {
             font-family: 'Fraunces', serif;
             font-size: 1.6rem;
@@ -43,11 +47,13 @@
             line-height: 1.5;
             color: #555;
             margin-bottom: 2.5rem;
-            white-space: nowrap;
         }
-
         /* Typography - Body text */
-        .text, .description p, .services-list li, .contact-text {
+        
+        .text,
+        .description p,
+        .services-list li,
+        .contact-text {
             font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
             line-height: 1.6;
@@ -55,19 +61,20 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .service-title {
             font-family: 'Inter', sans-serif;
-            font-weight: 500;  /* Using medium weight instead of bold for Inter */
+            font-weight: 500;
+            /* Using medium weight instead of bold for Inter */
         }
-
+        
         .email {
             font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
             color: #555;
         }
-
         /* Section layout */
+        
         section {
             display: flex;
             flex-direction: column;
@@ -77,12 +84,12 @@
             padding: 2rem;
             animation: fadeIn 1s ease-out;
         }
-
+        
         section:not(:last-child) {
             margin-bottom: 8vh;
             padding-bottom: 8vh;
         }
-
+        
         section:not(:last-child)::after {
             content: "";
             position: absolute;
@@ -94,25 +101,26 @@
             background-color: rgba(0, 0, 0, 0.1);
             transition: width 0.3s ease;
         }
-
+        
         section:not(:last-child):hover::after {
             width: 80px;
         }
-
         /* Contact section specific */
+        
         .contact-section {
             min-height: 100vh;
-            justify-content: center; /* Centers content vertically in the 100vh space */
+            justify-content: center;
+            /* Centers content vertically in the 100vh space */
         }
-
         /* Specific section styles */
+        
         .headline-section {
             padding-top: 40vh;
             width: 100%;
             padding-left: 2rem;
             padding-right: 2rem;
         }
-
+        
         .profile-image {
             position: absolute;
             top: 15vh;
@@ -124,18 +132,18 @@
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-
+        
         .profile-image:hover {
             transform: translateX(-50%) scale(1.05);
         }
-
         /* Services list */
+        
         .services-list {
             width: 100%;
             max-width: 800px;
             text-align: left;
         }
-
+        
         .services-list li {
             font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
@@ -147,17 +155,17 @@
             list-style: none;
             transition: transform 0.3s ease;
         }
-
+        
         .services-list li::before {
             content: "•";
             position: absolute;
             left: 0;
         }
-
+        
         .services-list li:hover {
             transform: translateX(5px);
         }
-
+        
         .service-title {
             display: block;
             font-family: 'Fraunces', serif;
@@ -166,8 +174,8 @@
             margin-bottom: 0.5rem;
             color: #333;
         }
-
         /* Contact section */
+        
         .email {
             font-size: 1.5rem;
             color: #555;
@@ -175,13 +183,13 @@
             transition: all 0.3s ease;
             margin-top: 2rem;
         }
-
+        
         .email:hover {
             transform: translateY(-2px);
             color: #333;
         }
-
         /* Animation keyframes */
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -192,18 +200,18 @@
                 transform: translateY(0);
             }
         }
-
         /* Add animation to sections */
+        
         section {
             animation: fadeIn 1s ease-out;
         }
-
         /* Stagger the animation for section content */
-        section h1, 
+        
+        section h1,
         section h2 {
             animation: fadeIn 1s ease-out 0.2s backwards;
         }
-
+        
         section .subtitle,
         section .text,
         section .description,
@@ -211,70 +219,70 @@
         section .contact-text {
             animation: fadeIn 1s ease-out 0.4s backwards;
         }
-
         /* Smooth transitions for interactive elements */
+        
         .email {
             transition: all 0.3s ease;
         }
-
+        
         .email:hover {
             transform: translateY(-2px);
             color: #333;
         }
-
         /* Subtle hover effect for service items */
+        
         .services-list li {
             transition: transform 0.3s ease;
         }
-
+        
         .services-list li:hover {
             transform: translateX(5px);
         }
-
         /* Subtle animation for the section separators */
+        
         section:not(:last-child)::after {
             transition: width 0.3s ease;
         }
-
+        
         section:not(:last-child):hover::after {
             width: 80px;
         }
-
         /* Smooth scroll behavior */
+        
         html {
             scroll-behavior: smooth;
         }
-
         /* Profile image hover effect */
+        
         .profile-image {
             transition: transform 0.3s ease;
         }
-
+        
         .profile-image:hover {
             transform: translateX(-50%) scale(1.05);
         }
-
         /* Hide sections initially */
+        
         section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease, transform 1s ease;
         }
-
         /* Class to add when section becomes visible */
+        
         section.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* Stagger child elements */
-        section h1, 
+        
+        section h1,
         section h2 {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
         }
-
+        
         section .subtitle,
         section .text,
         section .description,
@@ -284,22 +292,24 @@
             transform: translateY(20px);
             transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
         }
-
         /* Classes for child elements */
+        
         .fade-in {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
-
         /* Add responsive behavior if needed */
+        
         @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
             .subtitle {
                 font-size: 1.2rem;
-                white-space: normal;
             }
         }
-
         /* Arrow styling */
+        
         .scroll-arrow {
             position: absolute;
             bottom: -8rem;
@@ -311,27 +321,28 @@
             transition: opacity 1s ease;
             color: rgba(0, 0, 0, 0.3);
         }
-
         /* Arrow animation */
+        
         @keyframes arrowBounce {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateX(-50%) translateY(0);
             }
             50% {
                 transform: translateX(-50%) translateY(10px);
             }
         }
-
+        
         .scroll-arrow {
             animation: arrowBounce 2s infinite;
         }
-
         /* Make arrow visible when section is visible */
+        
         #section4.visible .scroll-arrow {
             opacity: 1;
         }
-
         /* Adjust section padding to accommodate lower arrow */
+        
         #section4 {
             padding-bottom: 4rem;
         }
@@ -346,7 +357,7 @@
                     if (entry.isIntersecting) {
                         // Add visible class to the section
                         entry.target.classList.add('visible');
-                        
+
                         // Animate child elements
                         const children = entry.target.querySelectorAll('h1, h2, .subtitle, .text, .description, .services-list, .contact-text');
                         children.forEach(child => {
@@ -370,47 +381,48 @@
             const arrow = document.querySelector('.scroll-arrow');
             if (arrow) {
                 arrow.addEventListener('click', () => {
-                    document.querySelector('#section5').scrollIntoView({ 
-                        behavior: 'smooth' 
+                    document.querySelector('#section5').scrollIntoView({
+                        behavior: 'smooth'
                     });
                 });
             }
         });
     </script>
 </head>
+
 <body>
     <section id="section1" class="headline-section">
         <img src="./image.jpg" alt="Lene Lyngsø" class="profile-image">
         <h1>Lene Lyngsø</h1>
         <p class="subtitle">Inddragelseskonsulent med speciale i børn og unges stemmer</p>
         <div class="description">
-            <p>I min virksomhed arbejder jeg målrettet med at skabe inkluderende processer, der giver børn og unge en aktiv rolle i beslutningsprocesser, udviklingsprojekter og i samfundet generelt. Som inddragelseskonsulent har jeg specialiseret mig i at skabe workshops og rådgivningsforløb, der bygger bro mellem unge mennesker og dem, der arbejder med dem – lige fra lærere og pædagoger til ledere og kommunale medarbejdere.</p>
+            <p>I min virksomhed arbejder jeg målrettet med at skabe inkluderende processer, der giver børn og unge en aktiv rolle i beslutningsprocesser, udviklingsprojekter og i samfundet generelt. Som inddragelseskonsulent har jeg specialiseret mig i at
+                skabe workshops og rådgivningsforløb, der bygger bro mellem unge mennesker og dem, der arbejder med dem – lige fra lærere og pædagoger til ledere og kommunale medarbejdere.</p>
         </div>
     </section>
     <section id="section2" class="content-section">
         <h2>Metode og tilgang</h2>
-        <p class="text">Med en metode, der vægter både sikkerhed og kreativitet, faciliterer jeg samtaler og processer, hvor børn og unge bliver set, hørt og taget alvorligt. Jeg har en solid erfaring med at skabe trygge rammer, hvor unge kan udtrykke deres tanker og idéer frit, hvilket er med til at sikre, at deres input bliver en central del af beslutningsgrundlaget.</p>
+        <p class="text">Med en metode, der vægter både sikkerhed og kreativitet, faciliterer jeg samtaler og processer, hvor børn og unge bliver set, hørt og taget alvorligt. Jeg har en solid erfaring med at skabe trygge rammer, hvor unge kan udtrykke deres tanker og
+            idéer frit, hvilket er med til at sikre, at deres input bliver en central del af beslutningsgrundlaget.</p>
     </section>
     <section id="section3" class="services-section">
         <h2>Ydelser</h2>
         <ul class="services-list">
             <li>
-                <span class="service-title">Inddragelsesworkshops for børn og unge</span>
-                Designet til at fremme engagement og ejerskab ved at invitere unge til at deltage aktivt i projekter og beslutninger, der påvirker dem.
+                <span class="service-title">Inddragelsesworkshops for børn og unge</span> Designet til at fremme engagement og ejerskab ved at invitere unge til at deltage aktivt i projekter og beslutninger, der påvirker dem.
             </li>
             <li>
-                <span class="service-title">Rådgivning til professionelle</span>
-                Strategier til meningsfuld inddragelse af børn og unge i skoler, fritidstilbud og kommunale projekter.
+                <span class="service-title">Rådgivning til professionelle</span> Strategier til meningsfuld inddragelse af børn og unge i skoler, fritidstilbud og kommunale projekter.
             </li>
             <li>
-                <span class="service-title">Procesfacilitering og uddannelse</span>
-                Kurser og forløb, der styrker de voksne omkring børnene i at bruge inddragende metoder og kommunikere på en måde, der skaber relationer og dialog.
+                <span class="service-title">Procesfacilitering og uddannelse</span> Kurser og forløb, der styrker de voksne omkring børnene i at bruge inddragende metoder og kommunikere på en måde, der skaber relationer og dialog.
             </li>
         </ul>
     </section>
     <section id="section4" class="content-section">
         <h2>Vores fælles mål</h2>
-        <p class="text">Jeg arbejder for at sikre, at børns og unges perspektiver bliver grundlaget for nye løsninger og initiativer, der kan styrke deres trivsel og aktive medborgerskab. Ved at tage udgangspunkt i deres virkelighed og erfaringer hjælper jeg organisationer og institutioner med at skabe forandringer, som har rod i de unges egen hverdag og fremtid.</p>
+        <p class="text">Jeg arbejder for at sikre, at børns og unges perspektiver bliver grundlaget for nye løsninger og initiativer, der kan styrke deres trivsel og aktive medborgerskab. Ved at tage udgangspunkt i deres virkelighed og erfaringer hjælper jeg organisationer
+            og institutioner med at skabe forandringer, som har rod i de unges egen hverdag og fremtid.</p>
         <div class="scroll-arrow">↓</div>
     </section>
     <section id="section5" class="contact-section">
@@ -418,4 +430,5 @@
         <a href="mailto:mail@lenelyngsoe.dk" class="email">mail@lenelyngsoe.dk</a>
     </section>
 </body>
-</html> 
+
+</html>
